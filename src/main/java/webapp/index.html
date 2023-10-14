@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>House List HomePage</title>
+</head>
+<body>
+	<h1>Welcome to the House List Database!</h1>
+	<h3>Please add a house listing</h3>
+	<form action = "addItemServlet" method="post">
+		Address: <input type ="text" name = "address">
+		City: <input type = "text" name = "city">
+		Price: <input type ="number" name = "price">
+		Number of Rooms: <input type = "number" name = "numRooms">
+		Number of Baths: <input type ="number" name = "numBaths">
+		Has A/C?: <input type = "checkbox" name = "a_c">
+		Has a basement?: <input type ="checkbox" name = "basement">
+		Has a pool?: <input type = "checkbox" name = "pool">
+		# of Stories: <input type = "number" name = "stories">
+		<input type = "submit" value="Add Item">
+	</form> 
+	<br />
+	<h3>Click here to view all items in the database</h3>
+	<a href = "viewAllItemsServlet">View the complete list</a>
+
+</body>
+</html>
