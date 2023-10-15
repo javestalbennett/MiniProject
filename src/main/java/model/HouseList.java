@@ -20,26 +20,27 @@ public class HouseList {
 	@Column(name="ID")
 	private int id;
 	@Column(name="ADDRESS")
-	private String address;
+	private String address = "blank";
 	@Column(name="CITY")
-	private String city;
+	private String city = "blank";
 	@Column(name="PRICE")
-	private double price;
+	private double price = 0;
 	@Column(name="NUMROOMS")
-	private int numRooms;
+	private int numRooms = 0;
 	@Column(name="NUMBATHS")
-	private double numBaths;
+	private double numBaths = 0;
 	@Column(name="AC")
-	private boolean A_C;
+	private boolean ac = false;
 	@Column(name="BASEMENT")
-	private boolean basement;
+	private boolean basement = false;
 	@Column(name="POOL")
-	private boolean pool;
+	private boolean pool = false;
 	@Column(name="STORIES")
-	private int stories;
+	private int stories = 0;
 	
 	public HouseList() {
 		super();
+
 	}
 	
 	public HouseList(String address, String city, double price, int numRooms, double numBaths) {
@@ -51,14 +52,14 @@ public class HouseList {
 		this.numBaths = numBaths;
 	}
 	
-	public HouseList(String address, String city, double price, int numRooms, double numBaths, boolean A_C, boolean basement, boolean pool, int stories) {
+	public HouseList(String address, String city, double price, int numRooms, double numBaths, boolean AC, boolean basement, boolean pool, int stories) {
 		super();
 		this.address = address;
 		this.city = city;
 		this.price = price;
 		this.numRooms = numRooms;
 		this.numBaths = numBaths;
-		this.A_C = A_C;
+		this.ac = AC;
 		this.basement = basement;
 		this.pool = pool;
 		this.stories = stories;
@@ -140,19 +141,19 @@ public class HouseList {
 	/**
 	 * @return the a_C
 	 */
-	public boolean isA_C() {
-		return A_C;
+	public boolean getAC() {
+		return ac;
 	}
 	/**
 	 * @param a_C the a_C to set
 	 */
-	public void setA_C(boolean a_C) {
-		A_C = a_C;
+	public void setAC(boolean ac) {
+		this.ac = ac;
 	}
 	/**
 	 * @return the basement
 	 */
-	public boolean isBasement() {
+	public boolean getBasement() {
 		return basement;
 	}
 	/**
@@ -164,7 +165,7 @@ public class HouseList {
 	/**
 	 * @return the pool
 	 */
-	public boolean isPool() {
+	public boolean getPool() {
 		return pool;
 	}
 	/**
@@ -189,7 +190,7 @@ public class HouseList {
 	@Override
 	public String toString() {
 		return "HouseList [id=" + id + ", address=" + address + ", city=" + city + ", price=" + price + ", numRooms="
-				+ numRooms + ", numBaths=" + numBaths + ", A_C=" + A_C + ", basement=" + basement + ", pool=" + pool
+				+ numRooms + ", numBaths=" + numBaths + ", ac=" + ac + ", basement=" + basement + ", pool=" + pool
 				+ ", stories=" + stories + "]";
 	}
 	

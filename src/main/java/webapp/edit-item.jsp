@@ -45,7 +45,7 @@
 		Price: <input type = "number" name = "price" value= "${itemToEdit.price}">
 		Number of Rooms: <input type ="number" name = "numRooms" value= "${itemToEdit.numRooms}">
 		Number of Bathrooms: <input type = "number" name = "numBaths" value= "${itemToEdit.numBaths}">
-		Has A/C: <input type ="checkbox" name = "a_c" value= "${itemToEdit.a_c}">
+<%-- 		Has A/C: <input type ="checkbox" name = "a_c" value= "${itemToEdit.ac}"> --%>
 		Has Basement: <input type ="checkbox" name = "basement" value= "${itemToEdit.basement}">
 		Has Pool: <input type ="checkbox" name = "a_c" value= "${itemToEdit.pool}">
 		# of Stories: <input type ="number" name = "stories" value= "${itemToEdit.stories}">

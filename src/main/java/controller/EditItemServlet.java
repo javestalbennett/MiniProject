@@ -36,9 +36,9 @@ public class EditItemServlet extends HttpServlet {
 		double price = Double.parseDouble(request.getParameter("price"));
 		int numRooms = Integer.parseInt(request.getParameter("numRooms"));
 		double numBaths =  Double.parseDouble(request.getParameter("numBaths"));
-		boolean a_c = Boolean.getBoolean(request.getParameter("a_c"));
-		boolean basement = Boolean.getBoolean(request.getParameter("basement"));
-		boolean pool = Boolean.getBoolean(request.getParameter("pool"));
+		boolean a_c = "on".equals(request.getParameter("a_c"));
+		boolean basement = "on".equals(request.getParameter("basement"));
+		boolean pool = "on".equals(request.getParameter("pool"));;
 		Integer stories = Integer.parseInt(request.getParameter("stories"));
 		Integer tempId = Integer.parseInt(request.getParameter("id"));
 				
@@ -48,7 +48,7 @@ public class EditItemServlet extends HttpServlet {
 		itemToUpdate.setPrice(price);
 		itemToUpdate.setNumRooms(numRooms);
 		itemToUpdate.setNumBaths(numBaths);
-		itemToUpdate.setA_C(a_c);
+		itemToUpdate.setAC(a_c);
 		itemToUpdate.setBasement(basement);
 		itemToUpdate.setPool(pool);
 		itemToUpdate.setStories(stories);

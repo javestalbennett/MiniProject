@@ -15,7 +15,11 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+<style>
+td {
+  padding-right: 30px;
+}
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<a class="navbar-brand" href="index.html">House Mini-Project</a>
@@ -41,18 +45,18 @@
 <body>
 <form method = "post" action = "navigationServlet" >
 <table>
-<c:forEach items="${requestScope.allItems}" var="currentitem">
+<c:forEach items="${requestScope.allItems}" var="row">
 <tr>
-<td><input type="radio" name="id" value="${currentitem.id}"></td>
-<td>${currentitem.address}</td>
-<td>${currentitem.city}</td>
-<td>${currentitem.price}</td>
-<td>${currentitem.numRooms}</td>
-<td>${currentitem.numBaths}</td>
-<td>${currentitem.a_c}</td>
-<td>${currentitem.basement}</td>
-<td>${currentitem.pool}</td>
-<td>${currentitem.stories}</td>
+<td><input type="radio" name="id" value="${row.id}"></td>
+<td>Address:<c:out value = "${row.address}"/></td>
+<td>  City:<c:out value = "${row.city}"/></td>
+<td>  Price:<c:out value = "${row.price}"/></td>
+<td>  Number of Rooms:<c:out value = "${row.numRooms}"/></td>
+<td>  Number of Baths:<c:out value = "${row.numBaths}"/></td>
+<%-- <td>  A/C? <c:out value = "${row.a_c}"/></td> --%>
+<td>  Basement?<c:out value = "${row.basement}"/></td>
+<td>  Pool?<c:out value = "${row.pool}"/></td>
+<td>  Stories?<c:out value = "${row.stories}"/></td>
 </tr>
 </c:forEach>
 </table>

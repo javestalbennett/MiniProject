@@ -31,9 +31,9 @@ public class AddItemServlet extends HttpServlet {
 		double price = Double.parseDouble(request.getParameter("price"));
 		int numRooms = Integer.parseInt(request.getParameter("numRooms"));
 		double numBaths =  Double.parseDouble(request.getParameter("numBaths"));
-		boolean a_c = Boolean.getBoolean(request.getParameter("a_c"));
-		boolean basement = Boolean.getBoolean(request.getParameter("basement"));
-		boolean pool = Boolean.getBoolean(request.getParameter("pool"));
+		boolean a_c = "on".equals(request.getParameter("a_c"));
+		boolean basement = "on".equals(request.getParameter("basement"));
+		boolean pool = "on".equals(request.getParameter("pool"));
 		Integer stories = Integer.parseInt(request.getParameter("stories"));
 		
 		HouseList li = new HouseList(address, city, price, numRooms, numBaths, a_c, basement, pool, stories);

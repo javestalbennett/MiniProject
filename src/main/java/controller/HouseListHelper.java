@@ -16,7 +16,7 @@ import model.HouseList;
  * Oct 14, 2023
  */
 public class HouseListHelper {
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("HouseList");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("houselist");
 	
 	public void insertItem(HouseList hl) {
 		EntityManager em = emfactory.createEntityManager();
