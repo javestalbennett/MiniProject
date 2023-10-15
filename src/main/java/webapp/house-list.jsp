@@ -27,12 +27,12 @@
 	<div class="collapse navbar-collapse" id="navbarText">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active"><a class="nav-link"
-				href="src/main/java/webapp/index.jsp">Home <span class="sr-only">(current)</span></a>
+				href="index.html">Home <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item"><a class="nav-link"
-				href="src/main/java/webapp/house-list.jsp">House-List</a></li>
+				href="house-list.jsp">House-List</a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="src/main/java/webapp/edit-item.jsp">Edit-Item</a></li>
+				href="edit-item.jsp">Edit-Item</a></li>
 		</ul>
 	</div>
 </nav>
